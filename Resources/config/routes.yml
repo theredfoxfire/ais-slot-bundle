@@ -1,0 +1,5 @@
+ais_slot_slot:
+    type: rest
+    prefix: /v1
+    resource: Ais\SlotBundle\Controller\SlotController
+    name_prefix:  api_1_ # naming collision

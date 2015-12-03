@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'slot.list'|trans({}, 'AisSlotBundle') }}</h1>
+
+    <ul id="slot-list">
+        {% for slot in slots %}
+            <li>
+                <a href="{{ path('api_1_get_slot', {'id': slot.id}) }}">{{ slot.jam }}</a>
+                {#[<a href="{{ path('api_1_edit_slots', {'id': slot.id}) }}">{{ 'slot.edit.link'|trans({}, 'AisSlotBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_slots', {'id': slot.id}) }}">{{ 'slot.remove.link'|trans({}, 'AisSlotBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'slot.list.empty'|trans({}, 'AisSlotBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_slot') }}">{{ 'slot.new.link'|trans({}, 'AisSlotBundle') }}</a>
+    </p>
+{% endblock %}

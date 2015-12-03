@@ -1,0 +1,17 @@
+Ais\SlotBundle\Entity\Slot:
+ type: entity
+ table: slot
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  jam:
+   type: string
+   length: 40
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true
