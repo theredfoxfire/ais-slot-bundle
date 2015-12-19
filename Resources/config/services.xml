@@ -16,6 +16,15 @@
             <argument>%ais_slot.slot.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        <service id="ais_slot.slot.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_slot.slot.class%</argument>
+		</service>
+        
+        <service id="ais_slot.slot.repository" 
+			class="Ais\SlotBundle\Repository\SlotRepository"
+			factory-service="ais_slot.slot.manager" factory-method="getRepository">
+				<argument>%ais_slot.slot.class%</argument>
+		</service>
     </services>
 
 </container>

@@ -1,6 +1,7 @@
 Ais\SlotBundle\Entity\Slot:
  type: entity
  table: slot
+ repositoryClass: Ais\SlotBundle\Repository\SlotRepository
  id:
   id: 
    type: integer

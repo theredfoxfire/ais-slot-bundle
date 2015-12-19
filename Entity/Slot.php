@@ -112,4 +112,3 @@ class Slot implements SlotInterface
         return $this->is_delete;
     }
 }
-
