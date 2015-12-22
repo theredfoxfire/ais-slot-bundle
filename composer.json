@@ -1,5 +1,5 @@
 {
-    "name" : "Ais/SlotBundle",
+    "name" : "ais/slotbundle",
     "description" : "A bundle filled with Slot",
     "type" : "symfony-bundle",
     "authors" : [{
